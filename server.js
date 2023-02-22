@@ -30,7 +30,9 @@ async function startServer() {
     await mongoose.connect('mongodb://localhost:27017/post_db',{
         useUnifiedTopology: true,
         useNewUrlParser: true,
-    })
+    });
+
+    console.log('Mongoose connected...');
 
     app.listen(4000, ()=> console.log("Server in running on port 4000"))
 }
